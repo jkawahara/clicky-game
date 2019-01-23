@@ -1,68 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Simpson Memory Clicky-Game
+### 1. Why / Background
+  * This is Berkeley Coding Boot Camp (BCBC) week 10 homework assignment.
+    * The BCBC curriculum generally focuses on JavaScript along with HTML/CSS, using the MERN (MongoDB, Express, React, Node) software stack, to teach web development skills across the client and server. 
+  * News Scraper is a web app that enable users to view and leave comments on the latest news.
+ ### 2. What / Objectives / User Stories
+  * From design through deployment of the application, this project used the following web development technologies:
+    * Server-side: Node.js with Express web application framework and MongoDB database for data persistence
+    * Client-side: Bootstrap front-end framework for HTML/CSS
+  * User Stories, by categorization:
+    * Set up web application framework using Express
+    * Design and develop Model schema including ODM (Mongoose) and DB (MongoDB) configuration
+    * Design and develop View on UI
+    * Design and develop Controller functions including HTTP requests/responses
+ ### 3. How / Design Description
+  * Although scope of the project fits well into [Agile methodology with Scrum and Kanban frameworks](https://en.wikipedia.org/wiki/Agile_software_development), due to limited scope and non-group assignment, GitHub's built-in tools were not used to support project execution:
+    * Projects: Kanban board for documenting user stories and overall progress
+    * Issues: Issue tracking for user stories, features and bug report
+  * Functionality - refer to [video of application user flow](https://drive.google.com/drive/folders/1PWeVaiAW64v2gYkkCKrSqTRhJEE6nBCx?usp=sharing):
+  * Design Description
+    * Application Setup (server.js)
+      * Configure Express web app framework listening on process.env.PORT (Heroku) or default to 3000. Parse URL encoded, any type including nested objects, and JSON and call appropriate routing.
+      * Assign routing views <-> model <-> DB as HTTP methods <-> CRUD operations <-> SQL
+        * POST <-> Create <-> INSERT
+        * GET <-> Read <-> SELECT
+      * Required modules: npm (express, express-handlebars, morgan, mongoose, axios, cheerio), /models
+      * Relevant functions: require(), use(), connect(), engine(), set(), get(), find(), catch(), send(), findOne(), populate(), post(), create(), findOneAndUpdate(), sync(), listen()
+      * Export: N/A
+    * Model Setup (/models, index.js, Article.js, Note.js)
+      * Define Mongoose version of Article, Note including associations
+      * Required modules: mongoose
+      * Relevant functions: require(), model(), exports()
+      * Export: Article, Note
+    * View Setup (server-side: /layout/main.handlebars, /layout/partials/*.handlebars, *.handlebars, client-side: N/A)
+      * Use Handlebars.js as web templating system with HTML pages leveraging main.handlebars layout and various *.handlebars partials
+  * Prerequisites for Development:
+    * MacBook Air (Intel Core i7, 2.2 GHz, 1 Processor, 2 Cores, 8GB)
+    * 64 bit operating system 
+    * git version 2.18.0
+    * Visual Studio Code Version 1.29.1
+    * [GitHub](https://github.com/jkawahara/news-scraper)
+    * Chrome Version 70.0.3538.110 (Official Build) (64-bit)
+  * Built With:
+    * This app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    * Server-side: N/A
+    * Client-side: 
+      * [React](https://reactjs.org/docs/getting-started.html)
+      * HTML, CSS, JavaScript
+    * Cloud: [GitHub Pages](https://pages.github.com/)
+  * Installing:
+    * For further development or use of this application, clone or download application files from GitHub, which is organized into the following directory structure:
+      * /clicky-game (application root directory level)
+        * /build
+        * /node_modules (ignored by git) - generated first time npm install executes
+        * /public
+        * /src
+          * /components
+            * /Header
+            * /ImageCard
+            * /Wrapper
+          * index.handlebars
+        * App.js
+        * images.json
+        * index.css
+        * index.js
+        * .gitignore
+        * LICENSE
+        * package.json - includes dependencies
+        * README.md
+        * yarn.lock
+    * Once the application files are ready per the above structure, go to the application root directory level
+      * Enter the following in termminal to install required node packages. This executes by referring to the included dependencies in package.json and creates required node packages in /node_modules and package-lock.json:
+        * npm install
+  * Running the tests:
+    * Unit testing & integration testing was informally executed
+  * Deployment:
+    * Deployed on [Heroku](https://bcbc-news-scraper.herokuapp.com/)
+ ## Versioning
+  * For the versions available, see the tags on this repository.
+ ## Authors
+  * John Kawahara.
+  * N/A- See also the list of contributors who participated in this project.
+ ## License
+  * This project is licensed under the [MIT License](LICENSE).
+ ## Acknowledgments
+  * Thanks to BCBC program personnel, especially our instructor, David Hallinan, along with our TAs, Hannah Bowers and Glo Austin, for their guidance and support.
