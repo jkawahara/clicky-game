@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Homer",
+    "image": "https://static.giantbomb.com/uploads/scale_small/0/4/12135-homer_simpson.gif"
+  },
+  {
+    "id": 2,
+    "name": "Marge",
+    "image": "https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/marge-simpson-the-simpsons-movie-66.3.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bart",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnsboJhah0UAGBp_rAvi7Yct-ts9qSHWiZNsLsYc220QxOHg6k7Q"
+  },
+  {
+    "id": 4,
+    "name": "Lisa",
+    "image": "https://darrynking.files.wordpress.com/2018/02/lisa-simpson.gif?w=300&h=288"
+  },
+  {
+    "id": 5,
+    "name": "Apu",
+    "image": "https://video.newsserve.net/700/v/20181026/1250738375-Controversy-Leads-The-Simpsons-To-Retire-Apu.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Mr. Burns",
+    "image": "https://vignette.wikia.nocookie.net/simpsons/images/6/6a/Mr_Burns_evil.gif/revision/latest?cb=20100702150413"
+  },
+  {
+    "id": 7,
+    "name": "Ned",
+    "image": "https://yt3.ggpht.com/a-/AAuE7mCqRiTuxsBBbepD-2nch93vREyuJADYUbnKQw=s900-mo-c-c0xffffffff-rj-k-no"
+  },
+  {
+    "id": 8,
+    "name": "Milhouse",
+    "image": "https://i.kym-cdn.com/entries/icons/facebook/000/017/519/Milhouse_Van_Houten.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Moe",
+    "image": "https://media.proprofs.com/images/QM/user_images/2169923/1513506540.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Krusty",
+    "image": "https://www.theglobeandmail.com/resizer/zHbQGO88GS2aI1V7tCQecLnHrkI=/1200x0/filters:quality(80)/arc-anglerfish-tgam-prod-tgam.s3.amazonaws.com/public/XDVTTBFNCFHVJC5K7LHUL2ZMNQ"
+  },
+  {
+    "id": 11,
+    "name": "Nelson",
+    "image": "http://www.quoteswarehouse.com/img/famous/nelson-muntz.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Barney",
+    "image": "https://c1.staticflickr.com/4/3464/3956378413_307062baa5.jpg"
+  }
+]
