@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
 import friends from "./images.json";
@@ -16,7 +16,7 @@ class App extends Component {
       <Wrapper>
         <Header>Simpsons Memory</Header>
         {this.state.friends.map(friend => (
-          <FriendCard
+          <ImageCard
             removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
