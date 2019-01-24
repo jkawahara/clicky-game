@@ -18,7 +18,7 @@
       * Define Simpsons characters object including id, name, image properties
       * Required modules: N/A
       * Relevant functions: N/A
-      * Export: N/A
+      * Export: N/A (imported into App.js)
     * View Setup (client-side: index.js, App.js, src/components/Header, /ImageCard, /Score, /Wrapper, index.html)
       * Use React.js to design App class and required components including state and props to pass to #root element of index.html
       * Required modules: npm (react, react-dom), App, index.css /components/ImageCard, Wrapper, Header, Score, simpsons.json, style.css, 
