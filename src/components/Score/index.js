@@ -6,7 +6,7 @@ function Score(props) {
     <div>
       <h3 className="score">
         <ul>
-          <li class="">You guessed correctly!</li>
+          <li className="">{props.message}</li>
           <li>Score: {props.currentScore} - Top Score: {props.topScore}</li>        
         </ul>
       </h3>

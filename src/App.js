@@ -9,8 +9,10 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     simpsons: simpsons,
+    clickedIds: [],
     currentScore: 0,
-    topScore: 0
+    topScore: 0,
+    message: ""
   };
 
   shuffleArray(simpsons) {
@@ -23,11 +25,15 @@ class App extends Component {
     return simpsons;
   }
 
-  handleImageClick = () => {
-    this.shuffleArray(simpsons);
-    this.setState((prevState) => ({
-      currentScore: prevState.currentScore + 1
-    }));
+  handleImageClick = (id) => {
+    if (this.state.clickedIds.indexOf(id) === -1) {
+      this.setState((prevState) => ({
+        currentScore: prevState.currentScore + 1,
+        clickedIds: [ ...this.state.clickedIds, id ],
+        message: "You guessed correctly!"
+      }));
+      this.shuffleArray(simpsons);  
+    }
   };
 
   // Map over this.state.simpsons to render a character component for each character object
@@ -38,6 +44,7 @@ class App extends Component {
         <Score
           currentScore={this.state.currentScore}
           topScore={this.state.topScore}
+          message={this.state.message}
         />
         <div className="container pt-0">
           {this.state.simpsons.map(character => (
