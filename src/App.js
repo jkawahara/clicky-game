@@ -12,7 +12,8 @@ class App extends Component {
     clickedIds: [],
     currentScore: 0,
     topScore: 0,
-    message: ""
+    message: "",
+    shake: false
   };
 
   shuffleArray(simpsons) {
@@ -26,14 +27,35 @@ class App extends Component {
   }
 
   handleImageClick = (id) => {
-    if (this.state.clickedIds.indexOf(id) === -1) {
+    if (this.state.clickedIds.indexOf(id) === -1 && this.state.currentScore < 11) {
       this.setState((prevState) => ({
         currentScore: prevState.currentScore + 1,
         clickedIds: [ ...this.state.clickedIds, id ],
-        message: "You guessed correctly!"
+        message: "You guessed correctly!",
+        shake: false
       }));
-      this.shuffleArray(simpsons);  
+      if (this.state.topScore <= this.state.currentScore) {
+        this.setState((prevState) => ({
+          topScore: prevState.currentScore
+        }));
+      }
+    } else if (this.state.clickedIds.indexOf(id) === -1 && this.state.currentScore >= 11) {
+        this.setState({
+          currentScore: 0,
+          topScore: 0,
+          clickedIds: [],
+          message: "You won! Play again",
+          shake: false
+        });
+    } else {
+      this.setState({
+        currentScore: 0,
+        clickedIds: [],
+        message: "You guessed incorrectly!",
+        shake: true
+      });
     }
+    this.shuffleArray(simpsons);
   };
 
   // Map over this.state.simpsons to render a character component for each character object
