@@ -1,3 +1,4 @@
+// *** Include Modules: npm (react), /components, simpsons.json
 import React, { Component } from "react";
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
@@ -5,8 +6,9 @@ import Header from "./components/Header";
 import Score from "./components/Score";
 import simpsons from "./simpsons.json";
 
+// Create component based App class that is stateful
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Initialize state properties; set simpsons value to simpsons.json 
   state = {
     simpsons: simpsons,
     clickedIds: [],
@@ -16,6 +18,7 @@ class App extends Component {
     shake: false
   };
 
+  // Shuffle position of characters for rendering
   shuffleArray(simpsons) {
     for (let i = simpsons.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -26,7 +29,9 @@ class App extends Component {
     return simpsons;
   }
 
+  // Handler for onClick of character
   handleImageClick = (id) => {
+    // Check if clicked character was not previously clicked then continue game
     if (this.state.clickedIds.indexOf(id) === -1 && this.state.currentScore < 11) {
       this.setState((prevState) => ({
         currentScore: prevState.currentScore + 1,
@@ -34,11 +39,13 @@ class App extends Component {
         message: "You guessed correctly!",
         shake: false
       }));
+      // Check if current score is greater than top score then set top score
       if (this.state.topScore <= this.state.currentScore) {
         this.setState((prevState) => ({
           topScore: prevState.currentScore
         }));
       }
+    // Check if current score is 12 then complete game
     } else if (this.state.clickedIds.indexOf(id) === -1 && this.state.currentScore >= 11) {
         this.setState({
           currentScore: 0,
@@ -47,6 +54,7 @@ class App extends Component {
           message: "You won! Play again",
           shake: false
         });
+    // Else restart game
     } else {
       this.setState({
         currentScore: 0,
@@ -55,6 +63,7 @@ class App extends Component {
         shake: true
       });
     }
+    // Call shuffle position
     this.shuffleArray(simpsons);
   };
 
@@ -83,4 +92,5 @@ class App extends Component {
   }
 }
 
+// Export class for importing into index.js
 export default App;
