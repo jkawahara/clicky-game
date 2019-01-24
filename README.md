@@ -57,19 +57,19 @@
           * /components
             * /Header
             * /ImageCard
+            * /Score
             * /Wrapper
           * index.handlebars
         * App.js
-        * images.json
         * index.css
-        * index.js
+        * simpsons.json
         * .gitignore
         * LICENSE
         * package.json - includes dependencies
         * README.md
         * yarn.lock
     * Once the application files are ready per the above structure, go to the application root directory level
-      * Enter the following in termminal to install required node packages. This executes by referring to the included dependencies in package.json and creates required node packages in /node_modules and package-lock.json:
+      * Enter the following in termminal to install required node packages. This executes by referring to the included dependencies in package.json and creates required node packages in /node_modules and yarn.lock:
         * npm install
   * Running the tests:
     * Unit testing & integration testing was informally executed
