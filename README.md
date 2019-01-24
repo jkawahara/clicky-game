@@ -45,8 +45,6 @@
         * /build - generated during build
         * /node_modules (ignored by git) - generated first time yarn install executes
         * /public
-          * /assets
-            * /images
         * /src
           * /components
             * /Header
