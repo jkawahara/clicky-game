@@ -13,6 +13,23 @@ class App extends Component {
     topScore: 0
   };
 
+  shuffleArray(simpsons) {
+    for (let i = simpsons.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = simpsons[i];
+        simpsons[i] = simpsons[j];
+        simpsons[j] = temp;
+    }
+    return simpsons;
+  }
+
+  handleImageClick = event => {
+    this.shuffleArray(simpsons);
+    this.setState({
+        
+    });
+  }
+
   // Map over this.state.simpsons to render a character component for each character object
   render() {
     return (
@@ -25,6 +42,7 @@ class App extends Component {
         <div className="container pt-0">
           {this.state.simpsons.map(character => (
             <ImageCard
+              handleImageClick={this.handleImageClick}
               id={character.id}
               key={character.id}
               image={character.image}
