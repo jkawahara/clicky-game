@@ -23,12 +23,12 @@ class App extends Component {
     return simpsons;
   }
 
-  handleImageClick = event => {
+  handleImageClick = () => {
     this.shuffleArray(simpsons);
-    this.setState({
-        
-    });
-  }
+    this.setState((prevState) => ({
+      currentScore: prevState.currentScore + 1
+    }));
+  };
 
   // Map over this.state.simpsons to render a character component for each character object
   render() {
