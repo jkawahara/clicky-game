@@ -1,6 +1,8 @@
+// *** Include Modules: npm (react), style.css
 import React from "react";
 import "./style.css";
 
+// Score component for message, current score, top score 
 function Score(props) {
   return (
     <div>
@@ -14,4 +16,5 @@ function Score(props) {
   );
 }
 
+// Export component for importing into App.js
 export default Score;
