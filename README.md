@@ -1,8 +1,8 @@
-# Simpson Memory Clicky-Game
+# Clicky Game
 ### 1. Why / Background
   * This is Berkeley Coding Boot Camp (BCBC) week 10 homework assignment.
     * The BCBC curriculum generally focuses on JavaScript along with HTML/CSS, using the MERN (MongoDB, Express, React, Node) software stack, to teach web development skills across the client and server. 
-  * News Scraper is a web app that enable users to view and leave comments on the latest news.
+  * Clicky Game is a memory game web app with the user trying to select all 12 of the Simpsons characters without selecting the same character more than once.
  ### 2. What / Objectives / User Stories
   * From design through deployment of the application, this project used the following web development technologies:
     * Server-side: Node.js with Express web application framework and MongoDB database for data persistence

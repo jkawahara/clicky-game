@@ -2,30 +2,35 @@ import React, { Component } from "react";
 import ImageCard from "./components/ImageCard";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
-import friends from "./images.json";
+import Score from "./components/Score";
+import simpsons from "./simpsons.json";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends: friends
+    simpsons: simpsons,
+    currentScore: 0,
+    topScore: 0
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.simpsons to render a character component for each character object
   render() {
     return (
       <Wrapper>
         <Header>Simpsons Memory</Header>
-        {this.state.friends.map(friend => (
-          <ImageCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
-          />
+        <Score
+          currentScore={this.state.currentScore}
+          topScore={this.state.topScore}
+        />
+        <div className="container pt-0">
+          {this.state.simpsons.map(character => (
+            <ImageCard
+              id={character.id}
+              key={character.id}
+              image={character.image}
+            />
         ))}
+        </div>
       </Wrapper>
     );
   }

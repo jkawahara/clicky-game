@@ -3,10 +3,7 @@ import "./style.css";
 
 function ImageCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img className="img-fluid" alt={props.name} src={props.image} />
-      </div>
+    <div role="img" aria-label="click item" className="click-item shake" style={{ backgroundImage: `url(${props.image})` }}>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.score {
+  background-color: skyblue;
+  color: #2A77AE;
+  text-align: center;
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
